@@ -531,50 +531,36 @@ html[data-theme="light"] .about__bg { opacity: .10; }
    ============================================================ */
 .section--factory { position: relative; overflow: hidden; }
 .section--factory .container { position: relative; z-index: 1; }
-.factory-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; opacity: .55; }
-html[data-theme="light"] .factory-bg { opacity: .42; }
+.factory-bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url('../assets/img/experience-bg.jpg') center center / cover no-repeat;
+  opacity: .17;
+  -webkit-mask-image: linear-gradient(transparent, #000 15%, #000 85%, transparent);
+          mask-image: linear-gradient(transparent, #000 15%, #000 85%, transparent);
+}
+html[data-theme="light"] .factory-bg { opacity: .12; }
 
-.gear {
-  position: absolute; border-radius: 50%;
-  border: 14px dashed rgba(45,212,191,.30);
-  animation: spin 16s linear infinite;
+/* About — visible profile portrait */
+.about__portrait {
+  margin: -4px -4px 20px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-soft);
 }
-.gear::after { content: ""; position: absolute; inset: 18px; border-radius: 50%; border: 3px solid rgba(45,212,191,.22); }
-.gear--1 { width: 180px; height: 180px; top: -46px; right: 5%; }
-.gear--2 { width: 118px; height: 118px; top: 72px; right: 2%; animation-duration: 11s; animation-direction: reverse; }
-@keyframes spin { to { transform: rotate(360deg); } }
+.about__portrait img { width: 100%; height: 230px; object-fit: cover; object-position: center 22%; display: block; }
 
-.belt {
-  position: absolute; left: 0; right: 0; bottom: 0; height: 40px;
-  background:
-    linear-gradient(0deg, rgba(45,212,191,.10), transparent),
-    repeating-linear-gradient(90deg, transparent 0 26px, rgba(45,212,191,.22) 26px 29px);
-  border-top: 2px solid rgba(45,212,191,.28);
-  animation: belt 1.5s linear infinite;
-}
-@keyframes belt { to { background-position: 0 0, -29px 0; } }
+/* Experience — concise holistic summary */
+.exp__summary { color: var(--text-mid); font-size: 15px; margin: 0 0 18px; }
+.exp__summary strong { color: var(--text); }
 
-.box {
-  position: absolute; bottom: 42px; width: 20px; height: 20px; border-radius: 3px;
-  border: 1.5px solid rgba(45,212,191,.45); background: rgba(45,212,191,.08);
-  animation: convey 7.2s linear infinite;
+/* Contact — AI handshake background */
+.section--contact { position: relative; overflow: hidden; }
+.section--contact .container { position: relative; z-index: 1; }
+.contact-bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url('../assets/img/contact-bg.jpg') center center / cover no-repeat;
+  opacity: .15;
+  -webkit-mask-image: linear-gradient(transparent, #000 22%, #000 100%);
+          mask-image: linear-gradient(transparent, #000 22%, #000 100%);
 }
-.box--1 { animation-delay: 0s; }
-.box--2 { animation-delay: 1.8s; }
-.box--3 { animation-delay: 3.6s; }
-.box--4 { animation-delay: 5.4s; }
-@keyframes convey { from { left: -44px; } to { left: calc(100% + 44px); } }
-
-.factory-live {
-  position: absolute; bottom: 56px; right: 22px;
-  display: inline-flex; align-items: center; gap: 7px; opacity: .55;
-  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent);
-}
-.factory-live i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 1.5s ease-in-out infinite; }
-@keyframes pulse {
-  0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(45,212,191,.5); }
-  50%     { opacity: .4; box-shadow: 0 0 0 7px rgba(45,212,191,0); }
-}
+html[data-theme="light"] .contact-bg { opacity: .10; }
 
 /* ============================================================
    EDUCATION — graduation gallery
