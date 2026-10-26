@@ -100,7 +100,8 @@
 
   <main>
     <!-- ====================== ABOUT ====================== -->
-    <section class="section" id="about">
+    <section class="section section--portrait" id="about">
+      <div class="about__bg" aria-hidden="true"></div>
       <div class="container">
         <div class="section__head reveal">
           <span class="section__index">01</span>
@@ -134,21 +135,18 @@
               as one.
             </p>
           </div>
-          <aside class="about__card reveal">
-            <div class="about__portrait">
-              <img src="assets/img/profile.jpg" alt="Portrait of Mohammed Faizan" loading="lazy" />
-            </div>
-            <h3>At a glance</h3>
-            <ul class="deflist">
-              <li><span>Current focus</span><strong>Program management &amp; AI-enabled manufacturing</strong></li>
-              <li><span>Based in</span><strong>Maryland, USA · open to relocation</strong></li>
-              <li><span>Education</span><strong>M.S. Engineering Management, UMBC</strong></li>
-              <li><span>Certifications</span><strong>PMP · Lean Six Sigma Black Belt</strong></li>
-              <li><span>Industries</span><strong>Food manufacturing · Building products · Hydro · Facilities</strong></li>
-              <li><span>Favorite quote</span><strong>“Nothing in life is to be feared, it is only to be understood.” — Marie Curie</strong></li>
-            </ul>
-          </aside>
         </div>
+        <aside class="about__card about__card--wide reveal">
+          <h3>At a glance</h3>
+          <ul class="deflist">
+            <li><span>Current focus</span><strong>Program management &amp; AI-enabled manufacturing</strong></li>
+            <li><span>Based in</span><strong>Maryland, USA · open to relocation</strong></li>
+            <li><span>Education</span><strong>M.S. Engineering Management, UMBC</strong></li>
+            <li><span>Certifications</span><strong>PMP · Lean Six Sigma Black Belt</strong></li>
+            <li><span>Industries</span><strong>Food manufacturing · Building products · Hydro · Facilities</strong></li>
+            <li><span>Favorite quote</span><strong>“Nothing in life is to be feared, it is only to be understood.” — Marie Curie</strong></li>
+          </ul>
+        </aside>
       </div>
     </section>
 
@@ -394,17 +392,8 @@
 
           <!-- AI Superintendent -->
           <article class="project project--reverse reveal">
-            <div class="project__media project__media--diagram">
-              <div class="diagram diagram--ai">
-                <span class="diagram__label">AI Superintendent</span>
-                <span class="diagram__sub">Decision-support prototype</span>
-                <ul class="diagram__flow diagram__flow--vert">
-                  <li>SAP · Maximo · Kronos signals</li>
-                  <li>Normalize &amp; define KPI semantics</li>
-                  <li>Loss stratification &amp; Pareto</li>
-                  <li>Grounded NL answers + source links</li>
-                </ul>
-              </div>
+            <div class="project__media">
+              <img src="assets/img/smart-factory.jpg" alt="Operator on a smart factory floor with live line dashboards showing OEE and KPI metrics" loading="lazy" />
             </div>
             <div class="project__body">
               <div class="project__kicker"><span class="tag tag--accent">Applied AI</span><span class="project__year">2025 – 2026</span></div>

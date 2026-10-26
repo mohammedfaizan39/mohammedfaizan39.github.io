@@ -513,18 +513,23 @@ html[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 .footer__top { font-family: var(--ff-mono); font-size: 13px; color: var(--accent); margin-top: 6px; }
 
 /* ============================================================
-   ABOUT — portrait watermark
+   ABOUT — portrait background + wide glance card
    ============================================================ */
 .section--portrait { position: relative; overflow: hidden; }
 .section--portrait .container { position: relative; z-index: 1; }
 .about__bg {
-  position: absolute; top: 0; right: 0; bottom: 0; width: min(48%, 560px); z-index: 0;
-  background: url('../assets/img/profile.jpg') no-repeat center right / cover;
-  opacity: .13; filter: grayscale(.25) contrast(1.05); pointer-events: none;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 62%);
-          mask-image: linear-gradient(90deg, transparent 0%, #000 62%);
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(46%, 620px); z-index: 0;
+  background: url('../assets/img/profile.jpg') no-repeat center top / cover;
+  opacity: .9; pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 58%);
+          mask-image: linear-gradient(90deg, transparent 0%, #000 58%);
 }
-html[data-theme="light"] .about__bg { opacity: .10; }
+html[data-theme="light"] .about__bg { opacity: .85; }
+
+.about__card--wide { margin-top: 34px; }
+.about__card--wide .deflist { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 36px; }
+.about__card--wide .deflist li { border-top: none; padding: 0; }
+.about__card--wide .deflist li:last-child { grid-column: 1 / -1; }
 
 /* ============================================================
    EXPERIENCE — live factory ambiance
@@ -570,7 +575,8 @@ html[data-theme="light"] .contact-bg { opacity: .10; }
   margin: 0; position: relative; border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--line-soft); box-shadow: var(--shadow);
 }
-.edu__photo img { width: 100%; height: 300px; object-fit: cover; object-position: center top; display: block; transition: transform .5s var(--ease); }
+.edu__photo { background: var(--media-bg); }
+.edu__photo img { width: 100%; height: 380px; object-fit: contain; display: block; transition: transform .4s var(--ease); }
 .edu__photo:hover img { transform: scale(1.04); }
 .edu__photo figcaption {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 16px 12px;
@@ -583,8 +589,9 @@ html[data-theme="light"] .contact-bg { opacity: .10; }
 }
 @media (max-width: 760px) {
   .edu__gallery { grid-template-columns: 1fr; }
-  .gear--1 { right: -40px; }
-  .about__bg { width: 70%; opacity: .09; }
+  .edu__photo img { height: 320px; }
+  .about__bg { width: 100%; opacity: .16; -webkit-mask-image: none; mask-image: none; }
+  .about__card--wide .deflist { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
