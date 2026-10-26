@@ -100,7 +100,8 @@
 
   <main>
     <!-- ====================== ABOUT ====================== -->
-    <section class="section" id="about">
+    <section class="section section--portrait" id="about">
+      <div class="about__bg" aria-hidden="true"></div>
       <div class="container">
         <div class="section__head reveal">
           <span class="section__index">01</span>
@@ -141,7 +142,7 @@
               <li><span>Based in</span><strong>Maryland, USA · open to relocation</strong></li>
               <li><span>Education</span><strong>M.S. Engineering Management, UMBC</strong></li>
               <li><span>Certifications</span><strong>PMP · Lean Six Sigma Black Belt</strong></li>
-              <li><span>Industries</span><strong>Food mfg · Building products · Hydro · Facilities</strong></li>
+              <li><span>Industries</span><strong>Food manufacturing · Building products · Hydro · Facilities</strong></li>
               <li><span>Favorite quote</span><strong>“Nothing in life is to be feared, it is only to be understood.” — Marie Curie</strong></li>
             </ul>
           </aside>
@@ -191,7 +192,7 @@
           <li class="timeline__item reveal">
             <span class="timeline__dot"></span>
             <span class="timeline__date">Jun 2024 – Jul 2026</span>
-            <h3>Perdue Farms — Continuous Improvement Manager</h3>
+            <h3>Perdue Farms — Program Manager, Manufacturing &amp; Continuous Improvement</h3>
             <p>Expanded program-management functions across two sites: CAPEX portfolio, labor productivity, reliability, quality and operating systems.</p>
           </li>
           <li class="timeline__item reveal">
@@ -205,7 +206,17 @@
     </section>
 
     <!-- ====================== EXPERIENCE ====================== -->
-    <section class="section" id="experience">
+    <section class="section section--factory" id="experience">
+      <div class="factory-bg" aria-hidden="true">
+        <span class="gear gear--1"></span>
+        <span class="gear gear--2"></span>
+        <span class="box box--1"></span>
+        <span class="box box--2"></span>
+        <span class="box box--3"></span>
+        <span class="box box--4"></span>
+        <span class="belt"></span>
+        <span class="factory-live"><i></i>Line running</span>
+      </div>
       <div class="container">
         <div class="section__head reveal">
           <span class="section__index">03</span>
@@ -216,7 +227,8 @@
         <div class="exp">
           <article class="exp__card reveal">
             <header class="exp__top">
-              <div>
+              <img class="exp__logo" src="assets/img/logo-perdue.webp" alt="Perdue Farms logo" loading="lazy" />
+              <div class="exp__head-main">
                 <h3 class="exp__role">Program Manager — Manufacturing &amp; Continuous Improvement</h3>
                 <p class="exp__org">Perdue Farms</p>
               </div>
@@ -238,7 +250,8 @@
 
           <article class="exp__card reveal">
             <header class="exp__top">
-              <div>
+              <span class="exp__logo exp__logo--mark" aria-hidden="true">CBB</span>
+              <div class="exp__head-main">
                 <h3 class="exp__role">Project Lead — Value Stream &amp; NPI</h3>
                 <p class="exp__org">Cornerstone Building Brands</p>
               </div>
@@ -257,7 +270,8 @@
 
           <article class="exp__card reveal">
             <header class="exp__top">
-              <div>
+              <img class="exp__logo" src="assets/img/logo-umbc.jpg" alt="University of Maryland, Baltimore County logo" loading="lazy" />
+              <div class="exp__head-main">
                 <h3 class="exp__role">Project &amp; Operations Coordinator</h3>
                 <p class="exp__org">University of Maryland, Baltimore County</p>
               </div>
@@ -275,7 +289,8 @@
 
           <article class="exp__card reveal">
             <header class="exp__top">
-              <div>
+              <span class="exp__logo exp__logo--mark" aria-hidden="true">CEE</span>
+              <div class="exp__head-main">
                 <h3 class="exp__role">Project Engineer</h3>
                 <p class="exp__org">Canara Engineering Enterprises</p>
               </div>
@@ -472,13 +487,6 @@
         </div>
         <div class="research">
           <article class="research__card reveal">
-            <span class="research__badge">IEEE BigData 2025</span>
-            <h3>Knowledge-Graph Digital Twin for Security Compliance</h3>
-            <p>A knowledge-graph-based digital twin for NIST SP 800-171 manufacturing security compliance. Equipment and compliance controls modeled in RDF/OWL with SPARQL queries on Apache Jena Fuseki; a retrieval-assisted LLM layer translates operator questions into graph queries.</p>
-            <p class="research__metric">~30 test queries · ~70–80% NL-to-query accuracy <span>(per paper)</span></p>
-            <div class="project__tags"><span>RDF / OWL</span><span>SPARQL</span><span>Jena Fuseki</span><span>RAG</span></div>
-          </article>
-          <article class="research__card reveal">
             <span class="research__badge">Computer Vision</span>
             <h3>UAV / Aerial-Image PV Potential Estimation</h3>
             <p>Segmentation architectures (U-Net / SegNet) distinguish installable rooftop surfaces in aerial imagery to estimate rooftop photovoltaic potential across multiple regions.</p>
@@ -557,6 +565,16 @@
         <div class="section__head reveal">
           <span class="section__index">07</span>
           <h2 class="section__title">Education &amp; Certifications</h2>
+        </div>
+        <div class="edu__gallery reveal">
+          <figure class="edu__photo">
+            <img src="assets/img/grad-neckband.jpg" alt="Mohammed Faizan in cap and gown with his green UMBC stole at commencement" loading="lazy" />
+            <figcaption>M.S. commencement — UMBC</figcaption>
+          </figure>
+          <figure class="edu__photo">
+            <img src="assets/img/grad-group.jpg" alt="Mohammed Faizan with fellow graduates on graduation day" loading="lazy" />
+            <figcaption>Graduation day with classmates</figcaption>
+          </figure>
         </div>
         <div class="edu">
           <div class="edu__col reveal">
