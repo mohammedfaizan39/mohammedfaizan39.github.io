@@ -555,6 +555,18 @@ html[data-theme="light"] .factory-bg { opacity: .12; }
 .exp__summary { color: var(--text-mid); font-size: 15px; margin: 0 0 18px; }
 .exp__summary strong { color: var(--text); }
 
+/* Projects — smart-factory background */
+.section--projects { position: relative; overflow: hidden; }
+.section--projects .container { position: relative; z-index: 1; }
+.projects-bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url('../assets/img/smart-factory.jpg') center center / cover no-repeat;
+  opacity: .12;
+  -webkit-mask-image: linear-gradient(transparent, #000 14%, #000 86%, transparent);
+          mask-image: linear-gradient(transparent, #000 14%, #000 86%, transparent);
+}
+html[data-theme="light"] .projects-bg { opacity: .08; }
+
 /* Contact — AI handshake background */
 .section--contact { position: relative; overflow: hidden; }
 .section--contact .container { position: relative; z-index: 1; }

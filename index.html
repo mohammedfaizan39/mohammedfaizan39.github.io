@@ -293,7 +293,8 @@
     </section>
 
     <!-- ====================== PROJECTS ====================== -->
-    <section class="section section--alt" id="projects">
+    <section class="section section--alt section--projects" id="projects">
+      <div class="projects-bg" aria-hidden="true"></div>
       <div class="container">
         <div class="section__head reveal">
           <span class="section__index">04</span>
@@ -392,8 +393,17 @@
 
           <!-- AI Superintendent -->
           <article class="project project--reverse reveal">
-            <div class="project__media">
-              <img src="assets/img/smart-factory.jpg" alt="Operator on a smart factory floor with live line dashboards showing OEE and KPI metrics" loading="lazy" />
+            <div class="project__media project__media--diagram">
+              <div class="diagram diagram--ai">
+                <span class="diagram__label">AI Superintendent</span>
+                <span class="diagram__sub">Decision-support prototype</span>
+                <ul class="diagram__flow diagram__flow--vert">
+                  <li>SAP · Maximo · Kronos signals</li>
+                  <li>Normalize &amp; define KPI semantics</li>
+                  <li>Loss stratification &amp; Pareto</li>
+                  <li>Grounded NL answers + source links</li>
+                </ul>
+              </div>
             </div>
             <div class="project__body">
               <div class="project__kicker"><span class="tag tag--accent">Applied AI</span><span class="project__year">2025 – 2026</span></div>
